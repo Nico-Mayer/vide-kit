@@ -1,0 +1,30 @@
+{
+	"name": "vide-kit",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "svelte-kit dev",
+		"build": "svelte-kit build",
+		"package": "svelte-kit package",
+		"preview": "svelte-kit preview",
+		"prepare": "svelte-kit sync"
+	},
+	"devDependencies": {
+		"@iconify-json/carbon": "^1.1.6",
+		"@iconify-json/simple-icons": "^1.1.18",
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/kit": "next",
+		"@unocss/core": "^0.41.1",
+		"@unocss/preset-attributify": "^0.41.1",
+		"@unocss/preset-icons": "^0.41.1",
+		"@unocss/preset-typography": "^0.41.1",
+		"@unocss/preset-uno": "^0.41.1",
+		"mdsvex": "^0.10.6",
+		"svelte": "^3.44.0",
+		"svelte-preprocess": "^4.10.7",
+		"unocss": "^0.41.1"
+	},
+	"type": "module",
+	"dependencies": {
+		"@unocss/reset": "^0.41.1"
+	}
+}

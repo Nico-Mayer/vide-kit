@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    %sveltekit.head%
+    <script>
+      // This function runs on load to check the selected theme
+      function themeCheck() {
+        const userTheme = localStorage.getItem("theme")
+        const systemTheme = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches
+        if (userTheme === "dark" || (!userTheme && systemTheme)) {
+          document.documentElement.classList.add("dark")
+          localStorage.setItem("theme", "dark")
+        } else {
+          localStorage.setItem("theme", "light")
+        }
+      }
+      themeCheck()
+    </script>
+  </head>
+  <body>
+    <div>%sveltekit.body%</div>
+  </body>
+</html>
