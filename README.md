@@ -1,4 +1,10 @@
-# Vide Kit
+<div align="center">
+  <h1><b>Vide Kit</b></h2>
+  <a href='https://vide-kit.vercel.app/' alt="#">Demo</a>
+  
+</div>
+
+<br/>
 
 [Vide](https://github.com/Nico-Mayer/vide) + <img src='https://api.iconify.design/logos:svelte-icon.svg?color=%23888888' alt ="sveltelogo" height='17'/>
 
