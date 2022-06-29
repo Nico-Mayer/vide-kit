@@ -3,7 +3,7 @@
   import drakula from "../lib/styles/oneDark.css"
 </script>
 
-<main>
+<main class="overflow-x-hidden">
   <Nav />
   <article
     class="prose mx-auto flex flex-col items-center p4 my-8"

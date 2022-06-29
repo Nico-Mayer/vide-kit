@@ -3,4 +3,4 @@
   console.log($page)
 </script>
 
-<main>ERROR {$page.status}</main>
+<main class="overflow-x-hidden">ERROR {$page.status}</main>

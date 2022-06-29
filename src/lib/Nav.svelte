@@ -3,7 +3,8 @@
   import { isDark } from "../stores/dark"
   import { page } from "$app/stores"
 
-  let mobile = false
+  let isOpen = false
+  $: openClass = isOpen ? "left-0" : "left-100%"
   $: currRoute = $page.url.pathname
 
   const menuLinks = [
@@ -58,21 +59,18 @@
     </button>
 
     <!-- MOBILE MENU -->
-    <button on:click={() => (mobile = !mobile)}>
+    <button on:click={() => (isOpen = !isOpen)}>
       <div class="i-carbon-menu md:hidden icon-btn" text="28px " />
     </button>
 
     <div
-      flex="col"
+      flex="~ col"
       items="center"
       bg="warm-gray-200 dark:coolgray-700"
       absolute="~"
-      hidden="~"
       top="4.5rem"
-      right="0"
       w="screen "
-      class="h-[calc(100vh_-_4.5rem)] md:hidden z-10"
-      class:flex={mobile}
+      class={"md:hidden z-10 " + openClass}
     >
       {#each menuLinks as link, index}
         <a
@@ -80,7 +78,10 @@
           class="border-b border-black/20 dark:border-white/20 w-full text-center p-4"
           class:border-t={index === 0}
         >
-          <div>{link.title}</div>
+          <div flex="~" justify="center">
+            <div class={link.icon} />
+            <span class="ml-4">{link.title}</span>
+          </div>
         </a>
       {/each}
     </div>
