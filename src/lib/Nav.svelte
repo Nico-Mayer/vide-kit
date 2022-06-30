@@ -4,7 +4,7 @@
   import { page } from "$app/stores"
 
   let isOpen = false
-  $: openClass = isOpen ? "left-0" : "left-100%"
+  $: openClass = isOpen ? "flex flex-col" : "hidden"
   $: currRoute = $page.url.pathname
 
   const menuLinks = [
@@ -32,7 +32,6 @@
   p="x4 md:x8"
   items="center"
   justify="between"
-  relative="~"
   class="shadow-sm"
 >
   <!--  LOGO -->
@@ -44,7 +43,11 @@
     <!-- DESKTOP MENU -->
     <div flex="md:~" hidden="~" space="x8">
       {#each menuLinks as link}
-        <a href={link.url} class:text-red-500={currRoute === link.url}>
+        <a
+          on:click={() => (isOpen = false)}
+          href={link.url}
+          class:text-red-500={currRoute === link.url}
+        >
           <div class={`${link.icon}`}>{link.title}</div>
         </a>
       {/each}
@@ -62,28 +65,25 @@
     <button on:click={() => (isOpen = !isOpen)}>
       <div class="i-carbon-menu md:hidden icon-btn" text="28px " />
     </button>
-
-    <div
-      flex="~ col"
-      items="center"
-      bg="warm-gray-200 dark:coolgray-700"
-      absolute="~"
-      top="4.5rem"
-      w="screen "
-      class={"md:hidden z-10 " + openClass}
-    >
-      {#each menuLinks as link, index}
-        <a
-          href={link.url}
-          class="border-b border-black/20 dark:border-white/20 w-full text-center p-4"
-          class:border-t={index === 0}
-        >
-          <div flex="~" justify="center">
-            <div class={link.icon} />
-            <span class="ml-4">{link.title}</span>
-          </div>
-        </a>
-      {/each}
-    </div>
   </div>
 </nav>
+
+<div
+  items="center"
+  bg="warm-gray-200 dark:coolgray-700"
+  w="screen "
+  class={"md:hidden z-10 " + openClass}
+>
+  {#each menuLinks as link, index}
+    <a
+      href={link.url}
+      class="border-b border-black/20 dark:border-white/20 w-full text-center p-4"
+      class:border-t={index === 0}
+    >
+      <div flex="~" justify="center">
+        <div class={link.icon} />
+        <span class="ml-4">{link.title}</span>
+      </div>
+    </a>
+  {/each}
+</div>
