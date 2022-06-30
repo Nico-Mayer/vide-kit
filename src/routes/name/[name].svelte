@@ -1,7 +1,6 @@
 <script>
   import { page } from "$app/stores"
   import { goto } from "$app/navigation"
-  console.log($page)
 
   let name = $page.params.name
 </script>
