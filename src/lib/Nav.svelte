@@ -35,7 +35,11 @@
   class="shadow-sm"
 >
   <!--  LOGO -->
-  <a href="/" class:text-red-500={currRoute === "/"}>
+  <a
+    on:click={() => (isOpen = !isOpen)}
+    href="/"
+    class:text-red-500={currRoute === "/"}
+  >
     <div class="i-simple-icons-svelte icon-btn" text="28px" />
   </a>
 

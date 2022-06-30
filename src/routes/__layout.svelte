@@ -15,7 +15,7 @@
   })
 </script>
 
-<main class="overflow-x-hidden ">
+<main>
   <Nav />
   <div flex="~ col" items="center" p="4">
     <slot />
