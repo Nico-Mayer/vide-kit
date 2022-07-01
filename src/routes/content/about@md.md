@@ -1,7 +1,3 @@
----
-layout: mds
----
-
 <div class="i-carbon-account text-5xl"></div>
 
 # About

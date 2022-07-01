@@ -1,8 +1,8 @@
 <script>
   import "@unocss/reset/tailwind.css"
   import "uno.css"
-  import Nav from "../lib/Nav.svelte"
-  import { isDark } from "../stores/dark"
+  import Nav from "$lib/Nav.svelte"
+  import { isDark } from "$lib/stores/dark"
   import { themeCheck } from "../lib/composables/darkMode"
   import { onMount } from "svelte"
   onMount(() => {

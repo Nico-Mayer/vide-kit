@@ -1,6 +1,6 @@
 <script>
   import { toggleTheme } from "./composables/darkMode"
-  import { isDark } from "../stores/dark"
+  import { isDark } from "$lib/stores/dark"
   import { page } from "$app/stores"
 
   let isOpen = false

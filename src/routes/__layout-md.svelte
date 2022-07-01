@@ -1,6 +1,6 @@
 <script>
-  import Nav from "../lib/Nav.svelte"
-  import drakula from "../lib/styles/oneDark.css"
+  import Nav from "$lib/Nav.svelte"
+  import "$lib/styles/oneDark.css"
 </script>
 
 <main>
