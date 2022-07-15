@@ -5,10 +5,7 @@
 
 <main>
   <Nav />
-  <article
-    class="prose mx-auto flex flex-col items-center p4 my-8"
-    style={"../lib/styles/lightcode.css"}
-  >
+  <article class="prose mx-auto flex flex-col items-center p4 my-8">
     <slot />
     <p class="opacity-20 font-italic">[Markdown Layout]</p>
   </article>

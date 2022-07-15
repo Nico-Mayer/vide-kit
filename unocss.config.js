@@ -1,10 +1,10 @@
 import {
   defineConfig,
-  presetAttributify,
-  presetTypography,
   presetUno,
   extractorSvelte,
   presetIcons,
+  presetTypography,
+  transformerVariantGroup,
 } from "unocss"
 
 export default defineConfig({
@@ -16,14 +16,6 @@ export default defineConfig({
       "bg-red-500/90 hover:bg-red-500 px4 py1 rounded text-warmgray-200 hover:shadow transition-all duration-200",
     ],
   ],
-  presets: [
-    presetUno(),
-    presetAttributify({
-      /* options */
-    }),
-    presetIcons({
-      /* options */
-    }),
-    presetTypography(),
-  ],
+  presets: [presetUno(), presetIcons(), presetTypography()],
+  transformers: [transformerVariantGroup()],
 })

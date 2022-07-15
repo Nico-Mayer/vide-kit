@@ -26,26 +26,19 @@
   }
 </script>
 
-<nav
-  flex="~"
-  h="18"
-  p="x4 md:x8"
-  items="center"
-  justify="between"
-  class="shadow-sm"
->
+<nav class="shadow-sm flex px-4 md:px-8 items-center justify-between h-18">
   <!--  LOGO -->
   <a
     on:click={() => (isOpen = !isOpen)}
     href="/"
     class:text-red-500={currRoute === "/"}
   >
-    <div class="i-simple-icons-svelte icon-btn" text="28px" />
+    <div class="i-simple-icons-svelte icon-btn text-[28px]" />
   </a>
 
-  <div flex="~ row">
+  <div class="flex">
     <!-- DESKTOP MENU -->
-    <div flex="md:~" hidden="~" space="x8">
+    <div class="md:flex hidden space-x-8">
       {#each menuLinks as link}
         <a
           on:click={() => (isOpen = false)}
@@ -60,23 +53,20 @@
     <!-- THEME TOGGLE -->
     <button on:click={handleClick}>
       <div
-        class="dark:i-carbon-sun i-carbon-moon icon-btn"
-        m="r4 md:l8 md:r0"
+        class="dark:i-carbon-sun i-carbon-moon icon-btn mr-4 md:(ml-8 mr-0)"
       />
     </button>
 
     <!-- MOBILE MENU -->
     <button on:click={() => (isOpen = !isOpen)}>
-      <div class="i-carbon-menu md:hidden icon-btn" text="28px " />
+      <div class="i-carbon-menu md:hidden icon-btn text-[28px]" />
     </button>
   </div>
 </nav>
 
 <div
-  items="center"
-  bg="warm-gray-200 dark:coolgray-700"
-  w="screen "
-  class={"md:hidden z-10 " + openClass}
+  class={"md:hidden z-10 items-center bg-warm-gray-200 dark:bg-cool-gray-700 w-screen " +
+    openClass}
 >
   {#each menuLinks as link, index}
     <a
@@ -84,7 +74,7 @@
       class="border-b border-black/20 dark:border-white/20 w-full text-center p-4"
       class:border-t={index === 0}
     >
-      <div flex="~" justify="center">
+      <div class="flex justify-center">
         <div class={link.icon} />
         <span class="ml-4">{link.title}</span>
       </div>

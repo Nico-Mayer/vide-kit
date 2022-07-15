@@ -17,7 +17,7 @@
 
 <main>
   <Nav />
-  <div flex="~ col" items="center" p="4">
+  <div class="p-4 items-center flex flex-col">
     <slot />
     <p class="opacity-20 font-italic">[Default Layout]</p>
   </div>

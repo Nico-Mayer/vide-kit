@@ -5,11 +5,13 @@
   let name = $page.params.name
 </script>
 
-<main m="y8" flex="~ col" items="center" space="y8">
+<main class="my-8 flex flex-col items-center space-y-8">
   <div class="i-carbon-machine-learning text-5xl" />
-  <div text="center">
-    <p text="xl">Hello <span text="red-500" font="bold">{name}</span> !</p>
-    <p text="sm" font="italic" opacity="50">[Demo of dynamic route]</p>
+  <div class="text-center">
+    <p class="text-xl">
+      Hello <span class="text-red-500 fot-bold">{name}</span> !
+    </p>
+    <p class="text-xs font-italic opacity-50">[Demo of dynamic route]</p>
   </div>
 
   <button class="btn" on:click={() => goto("/")}>Back</button>

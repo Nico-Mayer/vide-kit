@@ -1,30 +1,35 @@
 {
-	"name": "vide-kit",
+	"name": "omni-labs",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "svelte-kit dev",
-		"build": "svelte-kit build",
+		"dev": "vite dev --port 3000",
+		"build": "vite build",
 		"package": "svelte-kit package",
-		"preview": "svelte-kit preview",
-		"prepare": "svelte-kit sync"
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync",
+		"lint": "prettier --check --plugin-search-dir=. .",
+		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
 		"@iconify-json/carbon": "^1.1.6",
-		"@iconify-json/simple-icons": "^1.1.18",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
-		"@unocss/core": "^0.41.1",
-		"@unocss/preset-attributify": "^0.41.1",
-		"@unocss/preset-icons": "^0.41.1",
-		"@unocss/preset-typography": "^0.41.1",
-		"@unocss/preset-uno": "^0.41.1",
+		"@unocss/core": "^0.44.2",
+		"@unocss/preset-icons": "^0.44.2",
+		"@unocss/preset-typography": "^0.44.2",
+		"@unocss/preset-uno": "^0.44.2",
+		"@unocss/transformer-variant-group": "^0.44.2",
 		"mdsvex": "^0.10.6",
+		"prettier": "^2.6.2",
+		"prettier-plugin-svelte": "^2.7.0",
 		"svelte": "^3.44.0",
 		"svelte-preprocess": "^4.10.7",
-		"unocss": "^0.41.1"
+		"unocss": "^0.44.2",
+		"vite": "^3.0.0"
 	},
 	"type": "module",
 	"dependencies": {
-		"@unocss/reset": "^0.41.1"
+		"@iconify-json/simple-icons": "^1.1.19",
+		"@unocss/reset": "^0.44.2"
 	}
 }
